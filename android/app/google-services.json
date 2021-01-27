@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "516294247183",
+    "project_id": "itaxi-3120d",
+    "storage_bucket": "itaxi-3120d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516294247183:android:e4c24d1ea3cb5f70f9747a",
+        "android_client_info": {
+          "package_name": "com.duyqk.Taxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516294247183-pqij7phlu80n2t6cuimp5cr72hdb8f5f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmMuYojsTYUYJ46MpKdcXCsgBrX4h_G2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516294247183-pqij7phlu80n2t6cuimp5cr72hdb8f5f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "516294247183-a88p1dibnuebfq7ktvcqoc3k58l5lfa9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.duyqk.Taxi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

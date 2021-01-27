@@ -1,0 +1,17 @@
+{
+  "WelcomeBack" : "Bạn đã quay lại!",
+  "WelcomeAboard" : "Xin chào!",
+  "LoginToContinueUsingITaxi" : "Đăng nhâp để tiếp tục iTaxi",
+  "SignUpWithITaxiInSimpleSteps" : "Đăng ký iTaxi theo các bước sau",
+  "Email" : "Email",
+  "Password" : "Mật khẩu",
+  "ForgotPassword" : "Quên mật khẩu?",
+  "Login" : "Đăng nhập",
+  "NewUser" : "Mới dùng?",
+  "SignUpForNewAccount" : "Đăng ký mới",
+  "Name" : "Tên",
+  "PhoneNumber" : "Số điện thoại",
+  "SignUp" : "Đăng ký",
+  "AlreadyUser" : "Đã có tài khoản? ",
+  "LoginNow" : "Đăng nhập ngay"
+}

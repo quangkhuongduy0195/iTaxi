@@ -1,0 +1,17 @@
+{
+  "WelcomeBack" : "Welcome Back!",
+  "WelcomeAboard" : "Welcome Aboard!",
+  "LoginToContinueUsingITaxi" : "Login To Continue Using iTaxi",
+  "SignUpWithITaxiInSimpleSteps" : "Sign up with iTaxi in simple steps",
+  "Email" : "Email",
+  "Password" : "Password",
+  "ForgotPassword" : "Forgot password?",
+  "Login" : "Log in",
+  "NewUser" : "New User? ",
+  "SignUpForNewAccount" : "Sign up for a new account",
+  "Name" : "Name",
+  "PhoneNumber" : "Phone Number",
+  "SignUp" : "Sign up",
+  "AlreadyUser" : "Already a user? ",
+  "LoginNow" : "LoginNow"
+}
