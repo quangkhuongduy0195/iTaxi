@@ -184,6 +184,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Invalid name`
+  String get InvalidName {
+    return Intl.message(
+      'Invalid name',
+      name: 'InvalidName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid phone number`
+  String get InvalidPhoneNumber {
+    return Intl.message(
+      'Invalid phone number',
+      name: 'InvalidPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email`
+  String get InvalidEmail {
+    return Intl.message(
+      'Invalid email',
+      name: 'InvalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid password`
+  String get InvalidPassword {
+    return Intl.message(
+      'Invalid password',
+      name: 'InvalidPassword',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

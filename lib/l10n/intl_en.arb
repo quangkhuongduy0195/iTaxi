@@ -13,5 +13,9 @@
   "PhoneNumber" : "Phone Number",
   "SignUp" : "Sign up",
   "AlreadyUser" : "Already a user? ",
-  "LoginNow" : "LoginNow"
+  "LoginNow" : "LoginNow",
+  "InvalidName" : "Invalid name",
+  "InvalidPhoneNumber" : "Invalid phone number",
+  "InvalidEmail" : "Invalid email",
+  "InvalidPassword" : "Invalid password"
 }

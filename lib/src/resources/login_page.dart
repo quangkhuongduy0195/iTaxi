@@ -1,4 +1,5 @@
 import 'package:Taxi/generated/l10n.dart';
+import 'package:Taxi/src/models/login_info_model.dart';
 import 'package:Taxi/src/resources/register_page.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,18 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
+  TextEditingController _emailController;
+  TextEditingController _passwordController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _emailController = new TextEditingController();
+    _passwordController = new TextEditingController();
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -40,6 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
                     child: TextFieldBorder(
+                      controller: _emailController,
                       icon: Image.asset("ic_mail.png"),
                       placeholder: S.current.Email,
                     ),
@@ -47,6 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 22, 0, 0),
                     child: TextFieldBorder(
+                      controller: _passwordController,
                       isPassword: true,
                       icon: Image.asset("ic_lock.png"),
                       placeholder: S.current.Password,
@@ -85,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                           TextSpan(
                             recognizer: TapGestureRecognizer() ..onTap = () {
                               // Navigate Register Page
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage()));
+                              goToRegisterPage(context);
                             },
                             text: S.current.SignUpForNewAccount,
                             style: TextStyle(color: Color(0xff3277D8), fontSize: 16, fontFamily: "Montserrat"),
@@ -104,5 +119,16 @@ class _LoginPageState extends State<LoginPage> {
   }
   void Login_Clicked() {
 
+  }
+
+  void goToRegisterPage(BuildContext context) async {
+    final LoginInfoModel result = await Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage()));
+    if(result != null) {
+      setState(() {
+        _emailController.text = result.email;
+        _passwordController.text = result.password;
+      });
+    }
+    // debugPrint(result);
   }
 }

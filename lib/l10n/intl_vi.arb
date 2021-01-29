@@ -13,5 +13,10 @@
   "PhoneNumber" : "Số điện thoại",
   "SignUp" : "Đăng ký",
   "AlreadyUser" : "Đã có tài khoản? ",
-  "LoginNow" : "Đăng nhập ngay"
+  "LoginNow" : "Đăng nhập ngay",
+
+  "InvalidName" : "Tên không hợp lệ",
+  "InvalidPhoneNumber" : "Số điện thoại không hợp lệ",
+  "InvalidEmail" : "Email không hợp lệ",
+  "InvalidPassword" : "Mật khẩu không hợp lệ"
 }

@@ -1,41 +1,34 @@
 {
   "project_info": {
-    "project_number": "516294247183",
-    "project_id": "itaxi-3120d",
-    "storage_bucket": "itaxi-3120d.appspot.com"
+    "project_number": "180248643582",
+    "project_id": "itaxi-412ba",
+    "storage_bucket": "itaxi-412ba.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:516294247183:android:e4c24d1ea3cb5f70f9747a",
+        "mobilesdk_app_id": "1:180248643582:android:8eae5f6820f581865ae2af",
         "android_client_info": {
           "package_name": "com.duyqk.Taxi"
         }
       },
       "oauth_client": [
         {
-          "client_id": "516294247183-pqij7phlu80n2t6cuimp5cr72hdb8f5f.apps.googleusercontent.com",
+          "client_id": "180248643582-jqj79m4p3c8u8ub1e5gt6ohe4g9s5esq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAmMuYojsTYUYJ46MpKdcXCsgBrX4h_G2w"
+          "current_key": "AIzaSyBMhH7xH50cCIQ56071Ow3-qujm0j55upQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "516294247183-pqij7phlu80n2t6cuimp5cr72hdb8f5f.apps.googleusercontent.com",
+              "client_id": "180248643582-jqj79m4p3c8u8ub1e5gt6ohe4g9s5esq.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "516294247183-a88p1dibnuebfq7ktvcqoc3k58l5lfa9.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.duyqk.Taxi"
-              }
             }
           ]
         }

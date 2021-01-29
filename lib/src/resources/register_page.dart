@@ -1,5 +1,8 @@
+import 'dart:developer';
+
 import 'package:Taxi/generated/l10n.dart';
 import 'package:Taxi/src/blocs/register_bloc.dart';
+import 'package:Taxi/src/models/login_info_model.dart';
 import 'package:Taxi/src/resources/controls/text_field_border.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +33,20 @@ class _RegisterPageState extends State<RegisterPage> {
     _emailController = new TextEditingController();
     _passwordController = new TextEditingController();
     _registerBloc = new RegisterBloc();
+
+    _nameController.text = "DuyQK";
+    _phoneController.text = "0971627836";
+    _emailController.text = "DuyQk@gmail.com";
+    _passwordController.text = "DuyQK123123";
+
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    _registerBloc.dispose();
+    _registerBloc = null;
   }
 
   @override
@@ -63,6 +80,7 @@ class _RegisterPageState extends State<RegisterPage> {
                  ),
                  Padding(padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
                    child: TextFieldBorder(
+                     stream: _registerBloc.nameStream,
                      controller: _nameController,
                      icon: Image.asset("ic_user.png"),
                      placeholder: S.current.Name,
@@ -70,6 +88,8 @@ class _RegisterPageState extends State<RegisterPage> {
                  ),
                  Padding(padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
                    child: TextFieldBorder(
+                     keyboardType: TextInputType.phone,
+                     stream: _registerBloc.phoneStream,
                      controller: _phoneController,
                      icon: Image.asset("ic_phone.png"),
                      placeholder: S.current.PhoneNumber,
@@ -77,6 +97,8 @@ class _RegisterPageState extends State<RegisterPage> {
                  ),
                  Padding(padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
                    child: TextFieldBorder(
+                     keyboardType: TextInputType.emailAddress,
+                     stream: _registerBloc.emailStream,
                      controller: _emailController,
                      icon: Image.asset("ic_mail.png"),
                      placeholder: S.current.Email,
@@ -84,6 +106,7 @@ class _RegisterPageState extends State<RegisterPage> {
                  ),
                  Padding(padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
                    child: TextFieldBorder(
+                     stream: _registerBloc.passwordStream,
                      controller: _passwordController,
                      icon: Image.asset("ic_lock.png"),
                      placeholder: S.current.Password,
@@ -101,7 +124,7 @@ class _RegisterPageState extends State<RegisterPage> {
                        color: Colors.blue,
                        child: Text(S.current.SignUp, style: TextStyle(fontSize: 18, color: Colors.white, fontFamily: "Montserrat")),
                        onPressed: () {
-                         signUpClicked();
+                         signUpClicked(context);
                        },
                      ),
                    ),
@@ -116,7 +139,7 @@ class _RegisterPageState extends State<RegisterPage> {
                              text: S.current.LoginNow,
                              style: TextStyle(color: Color(0xff3277D8), fontSize: 16, fontFamily: "Montserrat"),
                              recognizer: TapGestureRecognizer() ..onTap = () {
-                               goBack(context);
+                               goBack(context, null);
                              }
                          ),
                        ],
@@ -131,11 +154,43 @@ class _RegisterPageState extends State<RegisterPage> {
      ),
     );
   }
-  void signUpClicked(){
-
+  void signUpClicked(BuildContext context){
+    var name = _nameController.text;
+    var phone = _phoneController.text;
+    var mail = _emailController.text;
+    var password = _passwordController.text;
+    if(_registerBloc.valid(name, phone, mail, password)){
+      // showAlertDialog(context);
+      _registerBloc.signUp(name, phone, mail, password, () {
+        debugPrint("=====Sign Up Success");
+        LoginInfoModel loginInfoModel = new LoginInfoModel(mail, password);
+        goBack(context, loginInfoModel);
+      }, () {
+        // Navigator.pop(context);
+      });
+    }
   }
 
-  void goBack(BuildContext context){
-    Navigator.pop(context);
+  void goBack(BuildContext context, LoginInfoModel loginInfoModel){
+    Navigator.pop(context, loginInfoModel);
   }
+
+  showAlertDialog(BuildContext context){
+    AlertDialog alert=AlertDialog(
+      content: new Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+              child: CircularProgressIndicator()),
+          Container(margin: EdgeInsets.only(left: 5),child:Text("Loading" )),
+        ],),
+      );
+    showDialog(barrierDismissible: false,
+      context:context,
+      builder:(BuildContext context){
+        return alert;
+      },
+    );
+  }
+
 }

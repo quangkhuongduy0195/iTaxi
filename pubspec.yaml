@@ -27,16 +27,16 @@ dependencies:
     sdk: flutter
 
   # Add the dependency for the Firebase Core Flutter SDK
-  firebase_core:
+  firebase_core: ^0.7.0
 
   # Add the dependency for the FlutterFire plugin for Google Analytics
-  firebase_analytics:
+#  firebase_analytics: ^7.0.1
 
   # Add the dependencies for any other Firebase products you want to use in your app
   # For example, to use Firebase Authentication and Cloud Firestore
-  firebase_auth:
-  cloud_firestore:
-  firebase_database:
+  firebase_auth: ^0.20.0+1
+#  cloud_firestore: ^0.16.0
+  firebase_database: ^6.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
