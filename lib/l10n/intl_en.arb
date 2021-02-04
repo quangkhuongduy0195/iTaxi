@@ -17,5 +17,6 @@
   "InvalidName" : "Invalid name",
   "InvalidPhoneNumber" : "Invalid phone number",
   "InvalidEmail" : "Invalid email",
-  "InvalidPassword" : "Invalid password"
+  "InvalidPassword" : "Invalid password",
+  "EnterTheLocationHere": "Enter the location here"
 }

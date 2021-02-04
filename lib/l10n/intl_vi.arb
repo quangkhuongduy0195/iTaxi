@@ -18,5 +18,6 @@
   "InvalidName" : "Tên không hợp lệ",
   "InvalidPhoneNumber" : "Số điện thoại không hợp lệ",
   "InvalidEmail" : "Email không hợp lệ",
-  "InvalidPassword" : "Mật khẩu không hợp lệ"
+  "InvalidPassword" : "Mật khẩu không hợp lệ",
+  "EnterTheLocationHere": "Nhập địa điểm ở đây"
 }

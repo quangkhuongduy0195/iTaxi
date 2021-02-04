@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function> {
     "AlreadyUser" : MessageLookupByLibrary.simpleMessage("Đã có tài khoản? "),
     "Email" : MessageLookupByLibrary.simpleMessage("Email"),
+    "EnterTheLocationHere" : MessageLookupByLibrary.simpleMessage("Nhập địa điểm ở đây"),
     "ForgotPassword" : MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
     "InvalidEmail" : MessageLookupByLibrary.simpleMessage("Email không hợp lệ"),
     "InvalidName" : MessageLookupByLibrary.simpleMessage("Tên không hợp lệ"),

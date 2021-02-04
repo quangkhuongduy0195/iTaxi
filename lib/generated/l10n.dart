@@ -224,6 +224,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Enter the location here`
+  String get EnterTheLocationHere {
+    return Intl.message(
+      'Enter the location here',
+      name: 'EnterTheLocationHere',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
