@@ -39,6 +39,7 @@ dependencies:
   firebase_database: ^6.0.0
 
   google_maps_flutter: ^1.1.1
+  flutter_polyline_points:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -81,6 +82,8 @@ flutter:
      - ic_notification.png
      - ic_logout.png
      - ic_help.png
+     - ic_to.png
+     - ic_from.png
 #     - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
